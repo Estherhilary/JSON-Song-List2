@@ -1,0 +1,28 @@
+html{
+    text-align: center;
+    background-color: #d0daf0;
+}
+
+body{
+    padding: 50px 0px 50px 0px;
+}
+
+.form{
+    margin-left: 33%;
+    padding: 12px;
+    display: block;
+    border-radius: 8px;
+    width: 30%;
+    background-color: #f5f5f5;
+}
+
+button{
+    background-color: #d0daf0;
+    border-radius: 8px;
+}
+
+img{
+    float: center;
+    width: 450px;
+
+}
