@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Song List</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h2 style="font-family: fantasy;">Boston Harmonies</h2>
+    <h4 style="font-family: fantasy;"> Music List</h4>
+
+    <img src="music-band.jpg"><br><br>
+
+    <script language='javascript'>
+        MusicList = {
+            "Song 1": {
+                "Artist" : "The Weeknd",
+                "Title" : "Blinding Lights",
+                "Music Genre": ["Synthwave"],
+                "Year Released": 2020
+            }, 
+            "Song 2" : {
+                "Artist" : "Diamond Platnumz",
+                "Title" : "Iyo",
+                "Music Genre": ["Dance"],
+                "Year Released": 2021
+            },
+            "Song 3": {
+                "Artist" : "Wizkid, Tems",
+                "Title" : "Essence",
+                "Music Genre": ["RnB", "Reggae"],
+                "Year Released": 2020
+            },
+            "Song 4": {
+                "Artist" : "Justin Beiber",
+                "Title" : "Hold On",
+                "Music Genre": ["Pop"],
+                "Year Released": 2021
+            },
+            "Song 5": {
+                "Artist" : "Post Malone",
+                "Title" : "Circles",
+                "Music Genre": ["Pop", "Hiphop"],
+                "Year Released": 2019
+            },
+            "Song 6": {
+                "Artist" : "Lil NasX",
+                "Title" : "Industry Baby",
+                "Music Genre": ["Pop", "Hiphop"],
+                "Year Released": 2021
+            },
+            "Song 7": {
+                "Artist" : "Meghan Stallion",
+                "Title" : "Thot Shit",
+                "Music Genre": ["Rap"],
+                "Year Released": 2021
+            },
+            "Song 8": {
+                "Artist" : "Ariana Grande",
+                "Title" : "Positions",
+                "Music Genre": ["Synthwave"],
+                "Year Released": 2020
+            },
+            "Song 9": {
+                "Artist" : "Burna Boy",
+                "Title" : "Ye",
+                "Music Genre": ["Hiphop", "Dancehall"],
+                "Year Released": 2020
+            },
+            "Song 10": {
+                "Artist" : "Doja Cat",
+                "Title" : "Woman",
+                "Music Genre": ["Pop"],
+                "Year Released": 2021
+            }
+        }
+
+        strMusicList = JSON.stringify(MusicList);
+        MusicListObject = JSON.parse(strMusicList);
+
+        //document.write(strMusicList);
+        for(let item in MusicListObject){
+            document.write(MusicListObject[item]["Title"] + "<br>");
+            document.write("Artist: " + MusicListObject[item]["Artist"] + "<br>");
+            document.write("Genre: " + MusicListObject[item]["Music Genre"] + "<br>");
+            document.write("Released " + MusicListObject[item]["Year Released"] + "<br><br>");
+        }
+    </script>
+    <div class="form">
+        <form name="pref_genre">
+            <p>Choose Your Favorite Music and Boston Harmonies will play it for you!</p>
+            <label for="pref_genre">What is your preferred music genre? </label>
+
+            <select id="genres" name="genres">
+                <option value="pop" id="pop">Pop</option>
+                <option value="hiphop">HipHop</option>
+                <option value="synthwave">Synthwave</option>
+                <option value="dancehall">DanceHall</option>
+                <option value="rap">Rap</option>
+                <option value="RnB">RnB</option>
+                <option value="reggae">Reggae</option>
+                <option value="dance">Dance</option>
+            </select><br><br>
+
+            <div id="results"> </div>
+
+            <button type="button" onclick="filter()">Filter</button>
+        </form>
+    </div>
+
+    <script language='javascript'>
+        function filter(){
+            if($(`#genres`).val() == "pop"){
+                document.getElementById("results").innerHTML = "Songs of your preferred genre: Hold On,  Circles,  Industry Baby,  Woman ";
+            }
+            else if($(`#genres`).val() == "hiphop"){
+                document.getElementById("results").innerHTML = "Songs of your preferred genre: Ye,  Circles,  Industry Baby ";
+            }
+            else if($(`#genres`).val() == "synthwave"){
+                document.getElementById("results").innerHTML = "Songs of your preferred genre: Positions,  Blinding Lights ";
+            }
+            else if($(`#genres`).val() == "rap"){
+                document.getElementById("results").innerHTML = "Songs of your preferred genre: Thot Shit ";
+            }
+            else if($(`#genres`).val() == "dancehall"){
+                document.getElementById("results").innerHTML = "Songs of your preferred genre: Ye ";
+            }
+            else if($(`#genres`).val() == "dance") {
+                document.getElementById("results").innerHTML = "Songs of your preferred genre: Iyo ";
+            }
+        }
+    </script>
+
+</body>
+</html>
