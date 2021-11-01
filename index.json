@@ -1,0 +1,63 @@
+{
+    "Song 1": {
+        "Artist" : "The Weeknd",
+        "Title" : "Blinding Lights",
+        "Music Genre": ["Synthwave"],
+        "Year Released": 2020
+    }, 
+    "Song 2" : {
+        "Artist" : "Diamond Platnumz",
+        "Title" : "Iyo",
+        "Music Genre": ["Dance"],
+        "Year Released": 2021
+    },
+    "Song 3": {
+        "Artist" : "Wizkid, Tems",
+        "Title" : "Essence",
+        "Music Genre": ["RnB", "Reggae"],
+        "Year Released": 2020
+    },
+    "Song 4": {
+        "Artist" : "Justin Beiber",
+        "Title" : "Hold On",
+        "Music Genre": ["Pop"],
+        "Year Released": 2021
+    },
+    "Song 5": {
+        "Artist" : "Post Malone",
+        "Title" : "Circles",
+        "Music Genre": ["Pop", "Hiphop"],
+        "Year Released": 2019
+    },
+    "Song 6": {
+        "Artist" : "Lil NasX",
+        "Title" : "Industry Baby",
+        "Music Genre": ["Pop", "Hiphop"],
+        "Year Released": 2021
+    },
+    "Song 7": {
+        "Artist" : "Meghan Stallion",
+        "Title" : "Thot Shit",
+        "Music Genre": ["Rap"],
+        "Year Released": 2021
+    },
+    "Song 8": {
+        "Artist" : "Ariana Grande",
+        "Title" : "Positions",
+        "Music Genre": ["Synthwave"],
+        "Year Released": 2020
+    },
+    "Song 9": {
+        "Artist" : "Burna Boy",
+        "Title" : "Ye",
+        "Music Genre": ["Hiphop", "Dancehall"],
+        "Year Released": 2020
+    },
+    "Song 10": {
+        "Artist" : "Doja Cat",
+        "Title" : "Woman",
+        "Music Genre": ["Pop"],
+        "Year Released": 2021
+    }
+}
+
